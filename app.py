@@ -1,12 +1,17 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import os
+# import os
 
 # =========================
 # LOAD DATA
 # =========================
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# DATA_PATH = os.path.join(BASE_DIR, "data", "knicks_spurs_playoffs_2025_26.csv")
+
+import os
+
+BASE_DIR = os.path.dirname(__file__)
 DATA_PATH = os.path.join(BASE_DIR, "data", "knicks_spurs_playoffs_2025_26.csv")
 
 df = pd.read_csv(DATA_PATH)
