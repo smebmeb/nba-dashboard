@@ -31,7 +31,7 @@ players = df["PLAYER_NAME"].unique()
 selected_player = st.sidebar.selectbox("Select Player", players)
 
 player_df = df[df["PLAYER_NAME"] == selected_player]
-
+last20 = player_df.sort_values("GAME_DATE", ascending=False).head(20)
 # =========================
 # METRICS (SAFE VERSION)
 # =========================
